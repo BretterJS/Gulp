@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 
 
 var sassOptions = {
@@ -26,6 +27,7 @@ gulp.task('sass', function () {
 gulp.task('es6', function() {
   gulp.src('src/js/*.js')
     .pipe(sourcemaps.init())
+    .pipe(concat())
     .pipe(babel())
     .pipe(uglify())
     .pipe(sourcemaps.write())
