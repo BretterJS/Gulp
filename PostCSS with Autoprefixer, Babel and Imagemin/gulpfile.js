@@ -49,4 +49,4 @@ gulp.task('es6', () => {
     gulp.watch('src/*js', ['es6']);
   });
 
-gulp.task('default', ['css', 'es6', 'html', 'images', 'watch');
+gulp.task('default', ['css', 'es6', 'html', 'images', 'watch']);
